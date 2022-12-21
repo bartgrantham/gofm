@@ -9,7 +9,7 @@ import (
     "sync"
     "time"
 
-    "periph.io/x/periph/conn/i2c"
+    "periph.io/x/conn/v3/i2c"
 )
 
 var ErrInvalidReg  = errors.New("invalid register")

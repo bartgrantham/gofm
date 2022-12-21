@@ -1,29 +1,6 @@
 package main
 
 /*
-TODO:
-
-* left off at: update_pin()
-* add database for 3-char stations
-* verify comments
-* much of this state should be scoped to the Program Information fields
-    * this would allow "band memory" of what stations are where, strengths, program types, stereo, RDS channels, etc.
-* low-hanging fruit group types
-    * 4A: Clock-time and date (every minute)
-    * 8A: Traffic Message Channel (CEN standard ENV 12313-1)
-    * 12A/B: Open Data ... but can I reverse engineer it?
-* investigate
-    * 5A/B: Transparent Data Channels ("alphanumeric characters, or other text (including mosaic graphics), or computer programs and similar data not for display.")
-    * 6A/B: In-house applications
-    * 7A: Radio Paging
-    * 9A: Emergency warning systems
-    * 10A: Program Type Name (more PT info)
-    * 13A: Enhanced Radio Paging
-    * 14A/B: Enhanced Other Networks
-    * 15B: Fast basic tuning and switching
-*/
-
-/*
 
 * rdsa: 16 bit PI Code; NA: encoded call sign, EU: country/coverage/program reference
 * rdsb:
@@ -48,6 +25,8 @@ RDS group types sometimes:
     Music/speech (M/S) code (0A, 0B, 15B)
     Radiotext (RT) message (2A, 2B)
     Enhanced other networks information (EON) (14A)
+
+(the cast majority of observed RDS group types is 0A/0B and 2A/2B)
 
 > The PI field in block A and the PTY and TP fields within block B can be processed with every valid group. The group type, which can be used to selectively process specific groups, such as 0A and 2A shown in this example, is also available in block B.
 

@@ -8,30 +8,15 @@ import (
 
     "github.com/gdamore/tcell"
 
-    "periph.io/x/periph/conn/gpio"
+    "periph.io/x/conn/v3/gpio"
 
-    "periph.io/x/periph/conn/i2c"
-    "periph.io/x/periph/conn/i2c/i2creg"
+    "periph.io/x/conn/v3/i2c"
+    "periph.io/x/conn/v3/i2c/i2creg"
+    "periph.io/x/conn/v3/pin/pinreg"
 
-    "periph.io/x/periph/host"
-    "periph.io/x/periph/host/rpi"
-
-    "periph.io/x/periph/conn/pin/pinreg"
+    "periph.io/x/host/v3"
+    "periph.io/x/host/v3/rpi"
 )
-
-/*
-# TODO
-
-## UI
-
-* show RDS codes 0A..15B that decay to almost black, one step per sec?
-    00A/B
-    02A/B
-* traffic?  Alert-C
-* scanned stations, strengths, stereo, traffic, program type
-* dyn prog type, alt freqs
-
-*/
 
 var i2c_addr = 0x10
 
