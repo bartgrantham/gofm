@@ -2,7 +2,11 @@
 
 ## General
 
+* only works on second run? (first run acts
 * off by .2MHz sometimes?
+* hangs if I2C is wedged (ex. CTRL-C doesn't work)
+* is pretty fragile to I2C state, doesn't accurately detect I2C state if it's not quite right
+
 
 - - - -
 
